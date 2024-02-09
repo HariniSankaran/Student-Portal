@@ -1,0 +1,46 @@
+{{outlet}}
+
+<div>
+  <img src="https://blog.zohowebstatic.com/sites/zblogs/images/mail/blog_without_text-2020-07.gif" alt="zoho-gif">
+</div>
+<div class="row py-5 mx-auto d-flex justify-content-center ">
+
+  {{#each this.model.data as |student|}}
+
+    <div class="col-3 card p-3 m-3 text-center card-bg">
+      <img src={{student.attributes.image}} class="card-img-top card-img" alt={{student.attributes.name}}>
+      <div class="card-body m-0">
+        <h5 class="card-title">{{student.attributes.name}}</h5>
+        <p class="card-text">{{student.attributes.domain}} - {{student.attributes.year}}</p>
+        <div class="d-flex justify-content-between">
+          <button class="btns" onclick={{action "openSidebar" student}}>Details</button>
+          <LinkTo @route="student-detail" @model={{student.id}}>
+            <button class="btns">Update</button>
+          </LinkTo>
+        </div>
+
+      </div>
+      <div class="social">
+        <i class="fa fa-linkedin-square"></i>
+        <i class="fa fa-facebook-f"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-whatsapp"></i>
+      </div>
+    </div>
+
+  {{/each}}
+
+</div>
+
+
+{{#if this.isSidebarOpen}}
+  <div class="sidebar">
+    <i class="fa fa-close d-flex justify-content-end mr-3 mt-3" style="font-size:28px;color:red"
+      onclick={{action "closeSidebar" }}></i>
+    <Sidebar @selectedStudent={{this.selectedStudent}} />
+    <div class="d-flex flex-row justify-content-around mx-auto my-5">
+      <button class="btn btn-danger " onclick={{action "deleteStudent"}}>Delete</button>
+      <button class="btn btn-primary " onclick={{action "closeSidebar" }}>Close</button>
+    </div>
+  </div>
+{{/if}}

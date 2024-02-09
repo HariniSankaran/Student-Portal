@@ -1,0 +1,45 @@
+import Controller from '@ember/controller';
+
+export default Controller.extend({
+    isSidebarOpen : false,
+    selectedStudent : null,
+
+    // async didUpdateAttrs() {
+    //     // Call this._super to ensure that the default behavior of the hook is executed
+    //     this._super(...arguments);
+    
+    //     // Reload the model data from the server
+    //     await this.refresh();
+    //   }
+    // ,
+
+    actions: {
+        openSidebar(student) {
+            this.set('isSidebarOpen', true);
+            this.set('selectedStudent', student);
+            console.log("adasd",  this.selectedStudent);
+        },
+        
+        closeSidebar() {
+            this.set('isSidebarOpen', false);
+        },
+
+        async deleteStudent(){
+
+            window.alert("Are you sure to delete the student detail");
+
+            const response = await fetch(`/api/deletestudent/${this.selectedStudent.id}`, {
+                method: 'DELETE'
+            });
+
+
+            this.set('isSidebarOpen', false);
+    
+            this.transitionToRoute('student');
+            window.location.reload();
+            return response;
+
+        },
+    
+    },
+});
