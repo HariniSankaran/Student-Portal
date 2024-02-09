@@ -4,15 +4,6 @@ export default Controller.extend({
     isSidebarOpen : false,
     selectedStudent : null,
 
-    // async didUpdateAttrs() {
-    //     // Call this._super to ensure that the default behavior of the hook is executed
-    //     this._super(...arguments);
-    
-    //     // Reload the model data from the server
-    //     await this.refresh();
-    //   }
-    // ,
-
     actions: {
         openSidebar(student) {
             this.set('isSidebarOpen', true);

@@ -141,15 +141,6 @@
   var _default = _exports.default = Ember.Controller.extend({
     isSidebarOpen: false,
     selectedStudent: null,
-    // async didUpdateAttrs() {
-    //     // Call this._super to ensure that the default behavior of the hook is executed
-    //     this._super(...arguments);
-
-    //     // Reload the model data from the server
-    //     await this.refresh();
-    //   }
-    // ,
-
     actions: {
       openSidebar(student) {
         this.set('isSidebarOpen', true);
@@ -677,8 +668,8 @@
   });
   _exports.default = void 0;
   var _default = _exports.default = Ember.HTMLBars.template({
-    "id": "84PqHaP2",
-    "block": "{\"symbols\":[],\"statements\":[[7,\"div\",true],[10,\"class\",\"header-bg container-fluid  d-flex justify-content-between align-items-start\"],[8],[0,\"\\n  \"],[7,\"img\",true],[10,\"src\",\"https://upload.wikimedia.org/wikipedia/commons/3/30/ZOHO_logo_2023.svg\"],[10,\"class\",\"mx-3 my-1\"],[10,\"alt\",\"zoho-logo\"],[8],[9],[0,\"\\n  \"],[5,\"link-to\",[],[[\"@route\"],[\"add-student\"]],{\"statements\":[[0,\"\\n  \"],[7,\"button\",true],[10,\"class\",\"mt-3 mr-3 btn btn-outline-success\"],[8],[0,\"\\n    Add new Student\\n  \"],[9],[0,\"\\n\"]],\"parameters\":[]}],[0,\"\\n\"],[9],[0,\"\\n\\n\"],[1,[22,\"outlet\"],false]],\"hasEval\":false}",
+    "id": "+TdUP42d",
+    "block": "{\"symbols\":[],\"statements\":[[7,\"div\",true],[10,\"class\",\"header-bg container-fluid  d-flex justify-content-between align-items-start\"],[8],[0,\"\\n  \"],[7,\"img\",true],[10,\"src\",\"https://upload.wikimedia.org/wikipedia/commons/3/30/\"],[10,\"class\",\"mx-3 my-1\"],[10,\"alt\",\"logo\"],[8],[9],[0,\"\\n  \"],[5,\"link-to\",[],[[\"@route\"],[\"add-student\"]],{\"statements\":[[0,\"\\n  \"],[7,\"button\",true],[10,\"class\",\"mt-3 mr-3 btn btn-outline-success\"],[8],[0,\"\\n    Add new Student\\n  \"],[9],[0,\"\\n\"]],\"parameters\":[]}],[0,\"\\n\"],[9],[0,\"\\n\\n\"],[1,[22,\"outlet\"],false]],\"hasEval\":false}",
     "meta": {
       "moduleName": "student-portal/templates/application.hbs"
     }
@@ -819,7 +810,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("student-portal/app")["default"].create({"name":"student-portal","version":"0.0.0+221be2f3"});
+            require("student-portal/app")["default"].create({"name":"student-portal","version":"0.0.0+933d06a4"});
           }
         
 //# sourceMappingURL=student-portal.map

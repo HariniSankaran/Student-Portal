@@ -1,8 +1,6 @@
 body{
-    /* background: linear-gradient(to right, rgb(142, 158, 171), rgb(238, 242, 243)); */
     width: 1000px;
     margin: auto;
-    /* background: rgb(171, 186, 171); */
     min-width: 400px; 
     max-width:1000px
 }
@@ -31,10 +29,6 @@ h3{
 .social{
     font-size:24px;
     
-}
-
-.but{
-    margin-top: 20px;
 }
 
 .social i{
